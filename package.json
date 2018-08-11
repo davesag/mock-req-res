@@ -33,10 +33,12 @@
   },
   "homepage": "https://github.com/davesag/mock-req-res#readme",
   "lint-staged": {
-    "**/*.{js,json}": [
-      "prettier --single-quote --no-semi --write",
-      "git add"
-    ]
+    "linters": {
+      "**/*.{js,json}": [
+        "prettier --single-quote --no-semi --write",
+        "git add"
+      ]
+    }
   },
   "nyc": {
     "check-coverage": true,

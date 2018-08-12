@@ -1,5 +1,7 @@
 # mock-req-res
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/mock-req-res.svg)](https://greenkeeper.io/)
+
 Simple yet extensible mock req / res objects for use in unit tests of Express controller and middleware functions.
 
 ## Branches

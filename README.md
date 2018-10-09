@@ -61,21 +61,23 @@ The `options` can be anything you wish to attach or override in the request.
 The vanilla `mockResponse` gives you the following functions, in the form of [`sinon`](https://sinonjs.org) spies and stubs.
 
 ```
-cookie: spy(),
 clearCookie: spy(),
+cookie: spy(),
 download: spy(),
+end: spy(),
 format: spy(),
 json: spy(),
 jsonp: spy(),
+redirect: spy(),
+render: spy(),
 send: spy(),
 sendFile: spy(),
 sendStatus: spy(),
-redirect: spy(),
-render: spy(),
-end: spy(),
 set: spy(),
 type: spy(),
 get: stub(),
+status: stub().returns(res) // returns itself, allowing chaining
+vary: stub().returns(res) // returns itself, allowing chaining
 ```
 
 ## Example

@@ -4,8 +4,7 @@
   "description": "Simple yet extensible mock req / res objects for use in unit tests of Express controller and middleware functions.",
   "main": "src/index.js",
   "engines": {
-    "node": "10.9.0",
-    "npm": "6.4.1"
+    "node": ">8.12.0"
   },
   "scripts": {
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",

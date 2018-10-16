@@ -24,7 +24,7 @@ Add `mock-req-res` as a `devDependency`:
 
     npm i -D mock-req-res
 
-You'll also need [`sinon`](https://sinonjs.org) version 6 or better.
+You'll also need [`sinon`](https://sinonjs.org) version 5 or better.
 
     npm i -D sinon
 

@@ -1,6 +1,6 @@
 # mock-req-res
 
-Simple, yet extensible, mock `req` / `res` objects for use in unit tests of Express controller and middleware functions.
+Simple, yet extensible, mock `req` / `res` objects for use in unit tests of [`ExpressJS`](https://expressjs.com) controller and middleware functions.
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/davesag/mock-req-res.svg)](https://greenkeeper.io/)
 
@@ -27,7 +27,9 @@ Add `mock-req-res` as a `devDependency`:
 
 ## Mocking `req`.
 
-To test a route controller or middleware function you need to mock a request object. Do this with
+To test a controller or middleware function you need to mock a request object.
+
+Do this with:
 
 ```
 const req = mockRequest(options)
@@ -47,7 +49,9 @@ get: stub(),
 
 ## Mocking `res`.
 
-To test a route controller or middleware function you also need to mock a response object. Do this with
+To test a route controller or middleware function you also need to mock a response object.
+
+Do this with:
 
 ```
 const res = mockResponse(options)
@@ -79,7 +83,7 @@ vary: stub().returns(res) // returns itself, allowing chaining
 
 ## Example
 
-Let's say you have an [`ExpressJS`](https://expressjs.com) route controller like this:
+Let's say you have a route controller like this:
 
 ```
 const save = require('../../utils/saveThing') // assume this exists.

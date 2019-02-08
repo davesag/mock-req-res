@@ -1,6 +1,6 @@
 # mock-req-res
 
-Simple, yet extensible, mock `req` / `res` objects for use in unit tests of Express controller and middleware functions.
+Simple, yet extensible, mock `req` / `res` objects for use in unit tests of [`ExpressJS`](https://expressjs.com) controller and middleware functions.
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/davesag/mock-req-res.svg)](https://greenkeeper.io/)
 
@@ -8,8 +8,10 @@ Simple, yet extensible, mock `req` / `res` objects for use in unit tests of Expr
 
 | Branch | Status | Coverage | Notes |
 | ------ | ------ | -------- | - |
-| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Work in progress |
-| `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Latest stable release |
+| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Work in progress |
+| `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Latest stable release |
+
+[![NPM](https://nodei.co/npm/mock-req-res.png)](https://nodei.co/npm/mock-req-res/)
 
 ## Prerequisites
 
@@ -17,6 +19,7 @@ This library assumes:
 
 1. You are using NodeJS 8+
 2. You write properly isolated unit tests of route controllers and ExpressJS middleware functions
+3. You use [`sinon`](https://sinonjs.org) version 5 or better.
 
 ## Install
 
@@ -24,13 +27,11 @@ Add `mock-req-res` as a `devDependency`:
 
     npm i -D mock-req-res
 
-You'll also need [`sinon`](https://sinonjs.org) version 5 or better.
-
-    npm i -D sinon
-
 ## Mocking `req`.
 
-To test a route controller or middleware function you need to mock a request object. Do this with
+To test a controller or middleware function you need to mock a request object.
+
+Do this with:
 
 ```
 const req = mockRequest(options)
@@ -50,7 +51,9 @@ get: stub(),
 
 ## Mocking `res`.
 
-To test a route controller or middleware function you also need to mock a response object. Do this with
+To test a route controller or middleware function you also need to mock a response object.
+
+Do this with:
 
 ```
 const res = mockResponse(options)
@@ -82,7 +85,7 @@ vary: stub().returns(res) // returns itself, allowing chaining
 
 ## Example
 
-Let's say you have an [`ExpressJS`](https://expressjs.com) route controller like this:
+Let's say you have a route controller like this:
 
 ```
 const save = require('../../utils/saveThing') // assume this exists.

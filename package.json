@@ -6,6 +6,11 @@
   "engines": {
     "node": ">= 8.12.0"
   },
+  "files": [
+    "/package*.json",
+    "/CONTRIBUTING.md",
+    "/src"
+  ],
   "scripts": {
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "eslint .",

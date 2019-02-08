@@ -8,8 +8,8 @@ Simple, yet extensible, mock `req` / `res` objects for use in unit tests of Expr
 
 | Branch | Status | Coverage | Notes |
 | ------ | ------ | -------- | - |
-| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Work in progress |
-| `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Latest stable release |
+| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Work in progress |
+| `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Latest stable release |
 
 ## Prerequisites
 
@@ -17,16 +17,13 @@ This library assumes:
 
 1. You are using NodeJS 8+
 2. You write properly isolated unit tests of route controllers and ExpressJS middleware functions
+3. You use [`sinon`](https://sinonjs.org) version 5 or better.
 
 ## Install
 
 Add `mock-req-res` as a `devDependency`:
 
     npm i -D mock-req-res
-
-You'll also need [`sinon`](https://sinonjs.org) version 5 or better.
-
-    npm i -D sinon
 
 ## Mocking `req`.
 

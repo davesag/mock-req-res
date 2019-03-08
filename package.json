@@ -1,6 +1,6 @@
 {
   "name": "mock-req-res",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple yet extensible mock req / res objects for use in unit tests of Express controller and middleware functions.",
   "main": "src/index.js",
   "engines": {
@@ -30,6 +30,9 @@
     "response"
   ],
   "author": "Dave Sag <davesag@gmail.com>",
+  "contributors": [
+    "John Keys <john@keyes.ie>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/davesag/mock-req-res/issues"

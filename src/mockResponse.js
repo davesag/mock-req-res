@@ -11,6 +11,7 @@ const mockResponse = (options = {}) => {
     send: spy(),
     sendFile: spy(),
     sendStatus: spy(),
+    setHeader: spy(),
     redirect: spy(),
     render: spy(),
     end: spy(),

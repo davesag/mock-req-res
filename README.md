@@ -46,7 +46,7 @@ body: {},
 cookies: {},
 query: {},
 params: {},
-get: stub(),
+get: stub()
 ```
 
 ## Mocking `res`.
@@ -76,12 +76,15 @@ render: spy(),
 send: spy(),
 sendFile: spy(),
 sendStatus: spy(),
+setHeader: spy(),
 set: spy(),
 type: spy(),
 get: stub(),
-status: stub().returns(res) // returns itself, allowing chaining
+status: stub().returns(res), // returns itself, allowing chaining
 vary: stub().returns(res) // returns itself, allowing chaining
 ```
+
+**Note** you can always add other spies or stubs as needed via the `options`.
 
 ## Example
 
@@ -90,10 +93,10 @@ Let's say you have a route controller like this:
 ```
 const save = require('../../utils/saveThing') // assume this exists.
 
-const createThing = (req, res) => {
+const createThing = async (req, res) => {
   const { name, description } = req.body
   if (!name || !description) throw new Error('Invalid Properties')
-  const saved = save({ name, description })
+  const saved = await save({ name, description })
   res.json(saved)
 }
 ```
@@ -126,9 +129,9 @@ describe('src/api/things/createThing', () => {
 
     const req = mockRequest({ body: { name, description }})
     const expected = { name, description, id: 1 }
-    before(() => {
+    before(async () => {
       save.returns(expected)
-      createThing(req, res)
+      await createThing(req, res)
     })
 
     after(resetStubs)

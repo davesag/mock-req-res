@@ -14,6 +14,7 @@ describe('src/mockResponse', () => {
     'send',
     'sendFile',
     'sendStatus',
+    'setHeader',
     'redirect',
     'render',
     'end',

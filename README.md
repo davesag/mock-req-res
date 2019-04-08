@@ -6,8 +6,9 @@ Simple, yet extensible, mock `req` / `res` objects for use in unit tests of [`Ex
 
 ## Branches
 
+<!-- prettier-ignore -->
 | Branch | Status | Coverage | Notes |
-| ------ | ------ | -------- | - |
+| ------ | ------ | -------- | ----- |
 | `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Work in progress |
 | `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Latest stable release |
 
@@ -25,7 +26,9 @@ This library assumes:
 
 Add `mock-req-res` as a `devDependency`:
 
-    npm i -D mock-req-res
+```
+npm i -D mock-req-res
+```
 
 ## Mocking `req`.
 
@@ -151,8 +154,8 @@ describe('src/api/things/createThing', () => {
 
 ## See also
 
-* [The Express Request object](https://expressjs.com/en/api.html#req) — `req`
-* [The Express Response object](https://expressjs.com/en/api.html#res) - `res`
+- [The Express Request object](https://expressjs.com/en/api.html#req) — `req`
+- [The Express Response object](https://expressjs.com/en/api.html#res) - `res`
 
 ## Contributing
 

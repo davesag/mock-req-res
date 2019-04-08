@@ -14,13 +14,9 @@
   "scripts": {
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "eslint .",
-    "prettier": "prettier --single-quote --no-semi --write '**/*.{js,json}'",
+    "prettier": "prettier --write '**/*.{js,json,md}'",
     "test": "find ./test/unit -name '*spec.js' | NODE_ENV=test xargs mocha --require ./test/unit/test_helper.js",
     "test:coverage": "find ./test/unit -name '*spec.js' | NODE_ENV=test xargs nyc mocha --require ./test/unit/test_helper.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davesag/mock-req-res.git"
   },
   "keywords": [
     "express",
@@ -34,36 +30,14 @@
     "John Keys <john@keyes.ie>"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davesag/mock-req-res.git"
+  },
   "bugs": {
     "url": "https://github.com/davesag/mock-req-res/issues"
   },
   "homepage": "https://github.com/davesag/mock-req-res#readme",
-  "lint-staged": {
-    "**/*.{js,json}": [
-      "prettier --single-quote --no-semi --write",
-      "git add"
-    ]
-  },
-  "nyc": {
-    "check-coverage": true,
-    "per-file": true,
-    "lines": 100,
-    "statements": 100,
-    "functions": 100,
-    "branches": 100,
-    "include": [
-      "src/**/*.js"
-    ],
-    "exclude": [
-      "index.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "all": true,
-    "cache": true
-  },
   "devDependencies": {
     "ajv": "^6.10.0",
     "chai": "^4.2.0",
@@ -86,6 +60,37 @@
   },
   "peerDependencies": {
     "sinon": ">= 5"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "proseWrap": "never"
+  },
+  "lint-staged": {
+    "**/*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "index.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "all": true,
+    "cache": true
   },
   "husky": {
     "hooks": {

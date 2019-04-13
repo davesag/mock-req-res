@@ -49,6 +49,7 @@ body: {},
 cookies: {},
 query: {},
 params: {},
+headers: {},
 get: stub()
 ```
 

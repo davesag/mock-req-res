@@ -4,7 +4,7 @@ const { mockRequest } = require('../../src')
 const hasProperty = require('./hasProperty')
 
 describe('src/mockRequest', () => {
-  const core = ['body', 'cookies', 'query', 'params', 'get']
+  const core = ['body', 'cookies', 'query', 'params', 'get', 'headers']
 
   context('without options', () => {
     const req = mockRequest()

@@ -26,7 +26,7 @@ This library assumes:
 
 Add `mock-req-res` as a `devDependency`:
 
-```
+```sh
 npm i -D mock-req-res
 ```
 
@@ -36,7 +36,7 @@ To test a controller or middleware function you need to mock a request object.
 
 Do this with:
 
-```
+```js
 const req = mockRequest(options)
 ```
 
@@ -44,11 +44,12 @@ The `options` can be anything you wish to attach or override in the request.
 
 The vanilla `mockRequest` gives you the following properties.
 
-```
+```js
 body: {},
 cookies: {},
 query: {},
 params: {},
+headers: {},
 get: stub()
 ```
 
@@ -58,7 +59,7 @@ To test a route controller or middleware function you also need to mock a respon
 
 Do this with:
 
-```
+```js
 const res = mockResponse(options)
 ```
 
@@ -66,7 +67,7 @@ The `options` can be anything you wish to attach or override in the request.
 
 The vanilla `mockResponse` gives you the following functions, in the form of [`sinon`](https://sinonjs.org) spies and stubs.
 
-```
+```js
 clearCookie: spy(),
 cookie: spy(),
 download: spy(),
@@ -93,7 +94,7 @@ vary: stub().returns(res) // returns itself, allowing chaining
 
 Let's say you have a route controller like this:
 
-```
+```js
 const save = require('../../utils/saveThing') // assume this exists.
 
 const createThing = async (req, res) => {
@@ -106,7 +107,7 @@ const createThing = async (req, res) => {
 
 To unit test this you could use [`Mocha`](https://mochajs.org), [`Chai`](http://www.chaijs.com), [`Sinon`](https://sinonjs.org), and [`Proxyquire`](https://github.com/thlorenz/proxyquire) as follows:
 
-```
+```js
 const { expect } = require('chai')
 const { stub, match } = require('sinon')
 const { mockRequest, mockResponse } = require('mock-req-res')
@@ -130,7 +131,7 @@ describe('src/api/things/createThing', () => {
     const name = 'some name'
     const description = 'some description'
 
-    const req = mockRequest({ body: { name, description }})
+    const req = mockRequest({ body: { name, description } })
     const expected = { name, description, id: 1 }
     before(async () => {
       save.returns(expected)
@@ -156,6 +157,24 @@ describe('src/api/things/createThing', () => {
 
 - [The Express Request object](https://expressjs.com/en/api.html#req) — `req`
 - [The Express Response object](https://expressjs.com/en/api.html#res) - `res`
+
+## Development
+
+### Prerequisites
+
+- [NodeJS](https://nodejs.org)
+
+### Test it
+
+- `npm test` — runs the unit tests.
+- `npm run test:coverage` — runs the unit tests with code coverage
+- `npm run test:mutants` — runs the mutation tests
+
+### Lint it
+
+```sh
+npm run lint
+```
 
 ## Contributing
 

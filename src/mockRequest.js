@@ -5,6 +5,7 @@ const mockRequest = (options = {}) => ({
   cookies: {},
   query: {},
   params: {},
+  headers: {},
   get: stub(),
   ...options
 })

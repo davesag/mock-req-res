@@ -167,7 +167,7 @@ describe('src/api/things/createThing', () => {
 ### Test it
 
 - `npm test` — runs the unit tests.
-- `npm run test:coverage` — runs the unit tests with code coverage
+- `npm run test:unit:cov` — runs the unit tests with code coverage
 - `npm run test:mutants` — runs the mutation tests
 
 ### Lint it

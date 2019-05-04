@@ -1,7 +1,7 @@
 {
   "name": "mock-req-res",
   "version": "1.1.0",
-  "description": "Simple yet extensible mock req / res objects for use in unit tests of Express controller and middleware functions.",
+  "description": "Extensible mock req / res objects for use in unit tests of Express controller and middleware functions.",
   "main": "src/index.js",
   "engines": {
     "node": ">= 8.10.0"
@@ -16,8 +16,8 @@
     "lint": "eslint .",
     "prettier": "prettier --write '**/*.{js,json,md}'",
     "test": "npm run test:unit",
-    "test:unit": "NODE_ENV=test mocha ./test/unit/ --require ./test/unit/testHelper.js --recursive --extension .test.js",
-    "test:unit:cov": "NODE_ENV=test nyc mocha ./test/unit/ --require ./test/unit/testHelper.js --recursive --extension .test.js",
+    "test:unit": "NODE_ENV=test mocha ./test/unit/ --require ./test/unitTestHelper.js --recursive",
+    "test:unit:cov": "NODE_ENV=test nyc mocha ./test/unit/ --require ./test/unitTestHelper.js --recursive",
     "test:mutants": "NODE_ENV=test npx stryker run"
   },
   "keywords": [

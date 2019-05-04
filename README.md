@@ -1,6 +1,6 @@
 # mock-req-res
 
-Extensible, mock `req` / `res` objects for use in unit tests of [`ExpressJS`](https://expressjs.com) controller and middleware functions.
+Extensible mock `req` / `res` objects for use in unit tests of [`ExpressJS`](https://expressjs.com) controller and middleware functions.
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/davesag/mock-req-res.svg)](https://greenkeeper.io/)
 

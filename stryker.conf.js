@@ -1,10 +1,10 @@
 module.exports = function(config) {
   config.set({
-    maxConcurrentTestRunners: 2, // workaround for https://github.com/stryker-mutator/stryker/issues/1525
+    maxConcurrentTestRunners: 2, // to stop it crapping out on ci
     mutate: ['src/**/*.js', '!src/index.js'],
     mutator: 'javascript',
     packageManager: 'npm',
-    reporters: ['clear-text', 'progress'],
+    reporters: ['clear-text'],
     testRunner: 'mocha',
     mochaOptions: {
       spec: ['./test/unit/**/*.test.js'],

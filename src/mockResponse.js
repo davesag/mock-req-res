@@ -6,6 +6,7 @@ const mockResponse = (options = {}) => {
     clearCookie: spy(),
     download: spy(),
     format: spy(),
+    getHeader: spy(),
     json: spy(),
     jsonp: spy(),
     send: spy(),

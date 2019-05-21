@@ -9,6 +9,7 @@ describe('src/mockResponse', () => {
     'clearCookie',
     'download',
     'format',
+    'getHeader',
     'json',
     'jsonp',
     'send',

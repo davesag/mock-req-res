@@ -1,13 +1,14 @@
 module.exports = function(config) {
   config.set({
+    maxConcurrentTestRunners: 2, // to stop it crapping out on ci
     mutate: ['src/**/*.js', '!src/index.js'],
     mutator: 'javascript',
     packageManager: 'npm',
-    reporters: ['clear-text', 'progress'],
+    reporters: ['clear-text'],
     testRunner: 'mocha',
     mochaOptions: {
-      files: ['test/unit/**/*.test.js'],
-      require: ['test/unit/testHelper.js']
+      spec: ['./test/unit/**/*.test.js'],
+      require: ['./test/unitTestHelper.js']
     },
     transpilers: [],
     testFramework: 'mocha',

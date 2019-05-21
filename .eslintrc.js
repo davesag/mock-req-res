@@ -1,6 +1,8 @@
+// need 'mocha' plugin here
+
 module.exports = {
   extends: ['standard', 'prettier', 'prettier/standard'],
-  plugins: ['prettier', 'standard', 'mocha'],
+  plugins: ['prettier', 'standard', 'mocha', 'import', 'promise'],
   parserOptions: {
     sourceType: 'module'
   },

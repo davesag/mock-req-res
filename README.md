@@ -1,6 +1,6 @@
 # mock-req-res
 
-Simple, yet extensible, mock `req` / `res` objects for use in unit tests of [`ExpressJS`](https://expressjs.com) controller and middleware functions.
+Extensible mock `req` / `res` objects for use in unit tests of [`ExpressJS`](https://expressjs.com) controller and middleware functions.
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/davesag/mock-req-res.svg)](https://greenkeeper.io/)
 
@@ -73,6 +73,7 @@ cookie: spy(),
 download: spy(),
 end: spy(),
 format: spy(),
+getHeader: spy(),
 json: spy(),
 jsonp: spy(),
 redirect: spy(),
@@ -167,7 +168,7 @@ describe('src/api/things/createThing', () => {
 ### Test it
 
 - `npm test` — runs the unit tests.
-- `npm run test:coverage` — runs the unit tests with code coverage
+- `npm run test:unit:cov` — runs the unit tests with code coverage
 - `npm run test:mutants` — runs the mutation tests
 
 ### Lint it

@@ -20,7 +20,7 @@ Add `mock-req-res` as a `devDependency`:
 npm i -D mock-req-res
 ```
 
-Add ['@types'](https://www.npmjs.com/package/@types/mock-req-res) if you are using TypeScript
+Add [`@types`](https://www.npmjs.com/package/@types/mock-req-res) if you are using TypeScript
 
 ```sh
 npm install --save-dev @types/mock-req-res

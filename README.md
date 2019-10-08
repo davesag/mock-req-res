@@ -2,16 +2,6 @@
 
 Extensible mock `req` / `res` objects for use in unit tests of [`ExpressJS`](https://expressjs.com) controller and middleware functions.
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/mock-req-res.svg)](https://greenkeeper.io/)
-
-## Branches
-
-<!-- prettier-ignore -->
-| Branch | Status | Coverage | Notes |
-| ------ | ------ | -------- | ----- |
-| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Work in progress |
-| `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Latest stable release |
-
 [![NPM](https://nodei.co/npm/mock-req-res.png)](https://nodei.co/npm/mock-req-res/)
 
 ## Prerequisites
@@ -28,6 +18,12 @@ Add `mock-req-res` as a `devDependency`:
 
 ```sh
 npm i -D mock-req-res
+```
+
+If you are using TypeScript you can add [`@types/mock-req-res`](https://www.npmjs.com/package/@types/mock-req-res):
+
+```sh
+npm i -D @types/mock-req-res
 ```
 
 ## Mocking `req`.
@@ -160,6 +156,16 @@ describe('src/api/things/createThing', () => {
 - [The Express Response object](https://expressjs.com/en/api.html#res) - `res`
 
 ## Development
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/mock-req-res.svg)](https://greenkeeper.io/)
+
+### Branches
+
+<!-- prettier-ignore -->
+| Branch | Status | Coverage | Notes |
+| ------ | ------ | -------- | ----- |
+| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Work in progress |
+| `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Latest stable release |
 
 ### Prerequisites
 

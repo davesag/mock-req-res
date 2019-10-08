@@ -1,6 +1,6 @@
 {
   "name": "mock-req-res",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Extensible mock req / res objects for use in unit tests of Express controller and middleware functions.",
   "main": "src/index.js",
   "engines": {

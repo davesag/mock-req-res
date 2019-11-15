@@ -2,14 +2,29 @@
   "name": "mock-req-res",
   "version": "1.1.2",
   "description": "Extensible mock req / res objects for use in unit tests of Express controller and middleware functions.",
+  "author": "Dave Sag <davesag@gmail.com>",
+  "type": "commonjs",
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/davesag"
+  },
   "main": "src/index.js",
   "engines": {
     "node": ">= 8.10.0"
   },
   "files": [
-    "/package*.json",
-    "/CONTRIBUTING.md",
-    "/src"
+    "CONTRIBUTING.md",
+    "src"
+  ],
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "contributors": [
+    "Greg Garrett <gcgarrett@gmail.com>",
+    "John Keys <john@keyes.ie>",
+    "Sandor Turanszky <sandor.turanszky@gmail.com>"
   ],
   "scripts": {
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
@@ -27,16 +42,9 @@
     "request",
     "response"
   ],
-  "author": "Dave Sag <davesag@gmail.com>",
-  "contributors": [
-    "Greg Garrett <gcgarrett@gmail.com>",
-    "John Keys <john@keyes.ie>",
-    "Sandor Turanszky <sandor.turanszky@gmail.com>"
-  ],
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davesag/mock-req-res.git"
+    "url": "https://github.com/davesag/mock-req-res.git"
   },
   "bugs": {
     "url": "https://github.com/davesag/mock-req-res/issues"
@@ -80,6 +88,11 @@
       "git add"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "nyc": {
     "check-coverage": true,
     "per-file": true,
@@ -99,10 +112,5 @@
     ],
     "all": true,
     "cache": true
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

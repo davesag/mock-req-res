@@ -1,5 +1,3 @@
-const { expect } = require('chai')
-
 const { mockResponse } = require('../../src')
 const hasProperty = require('./hasProperty')
 

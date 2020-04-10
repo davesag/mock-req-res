@@ -1,4 +1,4 @@
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     maxConcurrentTestRunners: 2, // to stop it crapping out on ci
     mutate: ['src/**/*.js', '!src/index.js'],

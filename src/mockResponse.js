@@ -1,28 +1,43 @@
 const { spy, stub } = require('sinon')
 
+/**
+ *  Create a mock response object with sensible defaults.
+ *
+ *  @ref https://expressjs.com/en/api.html#res
+ *  @param {Object} options — Optional overrides of the defaults.
+ *  @return {Object} a mock response object.
+ */
 const mockResponse = (options = {}) => {
   const res = {
-    cookie: spy(),
+    app: {},
+    headersSent: false,
+    locals: {},
+    append: spy(),
+    attachment: spy(),
     clearCookie: spy(),
     download: spy(),
+    end: spy(),
     format: spy(),
-    getHeader: spy(),
     json: spy(),
     jsonp: spy(),
+    links: spy(),
+    location: spy(),
+    redirect: spy(),
+    render: spy(),
     send: spy(),
     sendFile: spy(),
     sendStatus: spy(),
-    setHeader: spy(),
-    redirect: spy(),
-    render: spy(),
-    end: spy(),
     set: spy(),
+    setHeader: spy(),
     type: spy(),
     get: stub(),
+    getHeader: stub(),
     ...options
   }
-  res.status = stub().returns(res)
-  res.vary = stub().returns(res)
+  ;['cookie', 'status', 'vary'].forEach(field => {
+    res[field] = stub().returns(res)
+  })
+
   return res
 }
 

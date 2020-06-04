@@ -3,23 +3,32 @@ const hasProperty = require('./hasProperty')
 
 describe('src/mockResponse', () => {
   const core = [
-    'cookie',
+    'app',
+    'append',
+    'attachment',
     'clearCookie',
+    'cookie',
     'download',
+    'end',
     'format',
+    'get',
     'getHeader',
+    'headersSent',
     'json',
     'jsonp',
+    'links',
+    'locals',
+    'location',
+    'redirect',
+    'render',
     'send',
     'sendFile',
     'sendStatus',
-    'setHeader',
-    'redirect',
-    'render',
-    'end',
     'set',
+    'setHeader',
+    'status',
     'type',
-    'get'
+    'vary'
   ]
 
   context('without options', () => {

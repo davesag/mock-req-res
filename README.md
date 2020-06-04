@@ -38,15 +38,37 @@ const req = mockRequest(options)
 
 The `options` can be anything you wish to attach or override in the request.
 
-The vanilla `mockRequest` gives you the following properties.
+The vanilla `mockRequest` gives you the following properties, as well as functions in the form of [`sinon`](https://sinonjs.org) stubs.
 
 ```js
+app: {},
+baseUrl: '',
 body: {},
 cookies: {},
-query: {},
-params: {},
+fresh: true,
 headers: {},
-get: stub()
+hostname: '',
+ip: '127.0.0.1',
+ips: [],
+method: 'GET',
+originalUrl: '',
+params: {},
+path: '',
+protocol: 'https',
+query: {},
+route: {},
+secure: true,
+signedCookies: {},
+stale: false,
+subdomains: [],
+xhr: true,
+accepts: stub(),
+acceptsCharsets: stub(),
+acceptsEncodings: stub(),
+acceptsLanguages: stub(),
+get: stub(),
+is: stub(),
+range: stub(),
 ```
 
 ## Mocking `res`.
@@ -64,23 +86,30 @@ The `options` can be anything you wish to attach or override in the request.
 The vanilla `mockResponse` gives you the following functions, in the form of [`sinon`](https://sinonjs.org) spies and stubs.
 
 ```js
+app: {},
+headersSent: false,
+locals: {},
+append: spy(),
+attachment: spy(),
 clearCookie: spy(),
-cookie: spy(),
 download: spy(),
 end: spy(),
 format: spy(),
-getHeader: spy(),
 json: spy(),
 jsonp: spy(),
+links: spy(),
+location: spy(),
 redirect: spy(),
 render: spy(),
 send: spy(),
 sendFile: spy(),
 sendStatus: spy(),
-setHeader: spy(),
 set: spy(),
+setHeader: spy(),
 type: spy(),
 get: stub(),
+getHeader: stub(),
+cookie: stub().returns(res), // returns itself, allowing chaining
 status: stub().returns(res), // returns itself, allowing chaining
 vary: stub().returns(res) // returns itself, allowing chaining
 ```

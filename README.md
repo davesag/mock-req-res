@@ -186,15 +186,13 @@ describe('src/api/things/createThing', () => {
 
 ## Development
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/mock-req-res.svg)](https://greenkeeper.io/)
-
 ### Branches
 
 <!-- prettier-ignore -->
-| Branch | Status | Coverage | Notes |
-| ------ | ------ | -------- | ----- |
-| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Work in progress |
-| `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Latest stable release |
+| Branch | Status | Coverage | Audit | Notes |
+| ------ | ------ | -------- | ----- | ----- |
+| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | [![Vulnerabilities](https://snyk.io/test/github/davesag/mock-req-res/develop/badge.svg)](https://snyk.io/test/github/davesag/mock-req-res/develop) | Work in progress |
+| `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | [![Vulnerabilities](https://snyk.io/test/github/davesag/mock-req-res/master/badge.svg)](https://snyk.io/test/github/davesag/mock-req-res/master) | Latest stable release |
 
 ### Prerequisites
 

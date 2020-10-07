@@ -52,10 +52,8 @@
   },
   "homepage": "https://github.com/davesag/mock-req-res#readme",
   "devDependencies": {
-    "@stryker-mutator/core": "^3.3.1",
-    "@stryker-mutator/javascript-mutator": "^3.3.1",
-    "@stryker-mutator/mocha-framework": "^3.3.1",
-    "@stryker-mutator/mocha-runner": "^3.3.1",
+    "@stryker-mutator/core": "^4.0.0",
+    "@stryker-mutator/mocha-runner": "^4.0.0",
     "ajv": "^6.12.5",
     "chai": "^4.2.0",
     "eslint": "^7.10.0",
@@ -74,7 +72,7 @@
     "prettier": "^2.1.2",
     "sinon": "^9.2.0",
     "sinon-chai": "^3.5.0",
-    "snyk": "^1.410.2"
+    "snyk": "^1.410.3"
   },
   "peerDependencies": {
     "sinon": ">= 5"

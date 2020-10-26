@@ -196,7 +196,7 @@ describe('src/api/things/createThing', () => {
 
 ### Prerequisites
 
-- [NodeJS](https://nodejs.org)
+- [NodeJS](https://nodejs.org) version 15.0.1 or better.
 
 ### Test it
 

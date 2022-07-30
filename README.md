@@ -26,7 +26,7 @@ If you are using TypeScript you can add [`@types/mock-req-res`](https://www.npmj
 npm i -D @types/mock-req-res
 ```
 
-## Mocking `req`.
+## Mocking `req`
 
 To test a controller or middleware function you need to mock a request object.
 
@@ -71,7 +71,7 @@ is: stub(),
 range: stub(),
 ```
 
-## Mocking `res`.
+## Mocking `res`
 
 To test a route controller or middleware function you also need to mock a response object.
 
@@ -186,25 +186,22 @@ describe('src/api/things/createThing', () => {
 
 ## Development
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/mock-req-res.svg)](https://greenkeeper.io/)
-
 ### Branches
 
 <!-- prettier-ignore -->
-| Branch | Status | Coverage | Notes |
-| ------ | ------ | -------- | ----- |
-| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Work in progress |
-| `master` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/master) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | Latest stable release |
+| Branch | Status | Coverage | Audit | Notes |
+| ------ | ------ | -------- | ----- | ----- |
+| `develop` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/develop) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | [![Vulnerabilities](https://snyk.io/test/github/davesag/mock-req-res/develop/badge.svg)](https://snyk.io/test/github/davesag/mock-req-res/develop) | Work in progress |
+| `main` | [![CircleCI](https://circleci.com/gh/davesag/mock-req-res/tree/main.svg?style=svg)](https://circleci.com/gh/davesag/mock-req-res/tree/main) | [![codecov](https://codecov.io/gh/davesag/mock-req-res/branch/main/graph/badge.svg)](https://codecov.io/gh/davesag/mock-req-res) | [![Vulnerabilities](https://snyk.io/test/github/davesag/mock-req-res/main/badge.svg)](https://snyk.io/test/github/davesag/mock-req-res/main) | Latest stable release |
 
-### Prerequisites
+### Development Prerequisites
 
-- [NodeJS](https://nodejs.org)
+- [NodeJS](https://nodejs.org). I use [`nvm`](https://github.com/creationix/nvm) to manage Node versions — `brew install nvm`.
 
 ### Test it
 
 - `npm test` — runs the unit tests.
 - `npm run test:unit:cov` — runs the unit tests with code coverage
-- `npm run test:mutants` — runs the mutation tests
 
 ### Lint it
 

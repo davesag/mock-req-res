@@ -33,7 +33,7 @@
     "test": "npm run test:unit",
     "test:unit": "NODE_ENV=test mocha ./test/unit/ --require ./test/unitTestHelper.js --recursive",
     "test:unit:cov": "NODE_ENV=test nyc mocha ./test/unit/ --require ./test/unitTestHelper.js --recursive",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [
     "express",
@@ -51,6 +51,7 @@
   },
   "homepage": "https://github.com/davesag/mock-req-res#readme",
   "devDependencies": {
+    "@snyk/protect": "^1.981.0",
     "ajv": "^8.11.0",
     "chai": "^4.3.6",
     "eslint": "^8.20.0",
@@ -67,8 +68,7 @@
     "nyc": "^15.1.0",
     "prettier": "^2.7.1",
     "sinon": "^14.0.0",
-    "sinon-chai": "^3.5.0",
-    "snyk": "^1.981.0"
+    "sinon-chai": "^3.5.0"
   },
   "peerDependencies": {
     "sinon": "> 10.0.0"
